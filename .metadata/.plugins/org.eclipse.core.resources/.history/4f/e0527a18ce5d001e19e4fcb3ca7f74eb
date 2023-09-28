@@ -5,7 +5,7 @@ public class Main7_10 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		p2();
+		p1();
 		
 		
 	}
@@ -22,28 +22,6 @@ public class Main7_10 {
 			}
 			System.out.println();
 		}
-	}
-	
-	public static void p2() {
-//		 A 
-//	    A B 
-//	   A B C 
-//	  A B C D 
-//	 A B C D E
-	int lph=65;
-	int n=5;
-for(int i=1;i<=n;i++) {
-	for(int j=n;j>i;j--) {
-		System.out.print(" ");
-	}
-	for(int k=1;k<=i;k++) {
-	System.out.print((char)lph+" ");
-	lph++;
-	}
-	lph=65;
-	System.out.println();
-}
-	
 	}
 
 }

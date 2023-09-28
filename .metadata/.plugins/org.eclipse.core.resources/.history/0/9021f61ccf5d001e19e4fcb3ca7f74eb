@@ -37,10 +37,9 @@ for(int i=1;i<=n;i++) {
 		System.out.print(" ");
 	}
 	for(int k=1;k<=i;k++) {
-	System.out.print((char)lph+" ");
+	System.out.print((char)lph);
 	lph++;
 	}
-	lph=65;
 	System.out.println();
 }
 	

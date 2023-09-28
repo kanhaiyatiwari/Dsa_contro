@@ -31,19 +31,8 @@ public class Main7_10 {
 //	  A B C D 
 //	 A B C D E
 	int lph=65;
-	int n=5;
-for(int i=1;i<=n;i++) {
-	for(int j=n;j>i;j--) {
-		System.out.print(" ");
-	}
-	for(int k=1;k<=i;k++) {
-	System.out.print((char)lph+" ");
-	lph++;
-	}
-	lph=65;
-	System.out.println();
-}
-	
+	char a=(char) lph;
+	System.out.println(a);
 	}
 
 }
