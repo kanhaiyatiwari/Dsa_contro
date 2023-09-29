@@ -1,0 +1,39 @@
+package com.pattern.Number;
+
+public class p_123 {
+public static void main(String[] args) {
+	p1();
+	p2();
+}
+
+public static void p1() {
+StringBuilder s=new StringBuilder("          ");
+int mid=s.length()/2;
+int en=mid;
+int st=mid;
+while(st>=0&&en<s.length()) {
+	for(int i=st;i<=en;i++) {
+		s.setCharAt(i, '*');
+	}
+	System.out.println(s);
+	en=en+1;
+	st=st-1;
+}
+}
+
+public static void p2() {
+StringBuilder s=new StringBuilder("**********");
+int st=0;
+int en=s.length()-1;
+while(st<=en) {
+	System.out.println(s);
+s.setCharAt(st, ' ');	
+s.setCharAt(en, ' ');
+st++;
+en--;
+
+}
+
+}
+
+}
