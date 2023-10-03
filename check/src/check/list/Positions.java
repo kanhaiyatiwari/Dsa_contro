@@ -50,4 +50,6 @@ public static Node Deleteposition(Node a,int p) {
 	current.next=current.next.next;
 	return a;
 }
+
+
 }
