@@ -13,10 +13,12 @@ public class Reverse {
 		list.next=newNode;
 		list=list.next;
 	}
-System.out.println(ex1(head.next));
-		
+System.out.println(middle(head.next));
+System.out.println(deleteMiddle(head.next));	
 	}
-public static Node ex1(Node a) {
+	
+//	reverseList
+public static Node reverse(Node a) {
 	
 Node current=a;
 Node pre =null;
@@ -29,4 +31,36 @@ while(current!=null) {
 
 return pre;
 }
+
+// find middle Node
+
+public static Node middle(Node a) {
+	
+Node fast=a.next;
+Node slow=a;
+while(fast!=null&&fast.next!=null) {
+	slow=slow.next;
+	fast=fast.next.next;
+}
+return slow;
+}
+
+
+//delete middle node
+//for this we need node befor midle also
+public static Node deleteMiddle(Node a) {
+	
+Node fast=a.next;
+Node slow=a;
+Node pre=null;
+while(fast!=null&&fast.next!=null) {
+	pre=slow;
+	slow=slow.next;
+	fast=fast.next.next;
+}
+pre.next=pre.next.next;
+return a ;
+}
+
+
 }
