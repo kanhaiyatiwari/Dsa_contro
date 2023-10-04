@@ -4,10 +4,8 @@ import com.list.intro.Node;
 
 public class merge {
 public static void main(String[] args) {
-	Node list1=Node1();
-	Node list2=Node2() ;
-	System.out.println(list1);
-	System.out.println(list2);
+	
+	System.out.println(mergeList(Node1(),Node2()));
 }
 
 //list1
@@ -45,4 +43,38 @@ public static Node Node2() {
 	list4.next=list5;
 	return head;
 }
+
+public  static Node mergeList(Node list1,Node list2) {
+	
+	Node head=new Node(-1);
+	Node ans=head;
+	while(list1!=null&&list2!=null) {
+//		ans.next=list1;
+//		list1=list1.next;
+//		ans=ans.next;
+		if(list1.data<list2.data) {
+			ans.next=list1;
+			list1=list1.next;
+			ans=ans.next;
+		}else {
+			ans.next=list2;
+			list2=list2.next;
+			ans=ans.next;
+		}
+	}
+	
+	while(list1!=null) {
+		ans.next=list1;
+		list1=list1.next;
+		ans=ans.next;
+	}
+	
+	while(list2!=null) {
+		ans.next=list2;
+		list2=list2.next;
+		ans=ans.next;
+	}
+	return head.next;
+}
+
 }
