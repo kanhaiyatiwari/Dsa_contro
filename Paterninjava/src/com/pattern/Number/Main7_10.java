@@ -6,7 +6,7 @@ public class Main7_10 {
 		// TODO Auto-generated method stub
 
 		p2();
-		
+		helggghkgkg
 		
 	}
 	public static void p1() {
